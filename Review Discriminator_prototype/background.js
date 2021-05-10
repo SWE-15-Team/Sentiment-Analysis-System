@@ -79,11 +79,11 @@ function sendBlockReply(tabId, isChecked, data, nodeNum, score) {
             score: score
         });
 }
-function sendHighlightReply(tabId, isSpoiler, title, nodeNum, score) {
+function sendHighlightReply(tabId, isChecked, data, nodeNum, score) {
     chrome.tabs.sendMessage(tabId,
         {
             message: 'highlightReply',
-            iisChecked: isChecked,
+            isChecked: isChecked,
             data: data,
             nodeNum: nodeNum,
             score: score

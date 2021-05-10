@@ -102,6 +102,13 @@ blurNode = function (node) {
         node.style.filter = blurText;
     }
 }
+highlightNode = function (node) {
+    let highlightText = "bold";
+    if (node.isHighlightd == undefined) {
+        node.isHighlightd = true;
+        node.style.fontWeight = highlightText;
+    }
+}
 AttachBlockObserver = function () {
     if (attachObserver)
         return;
@@ -146,7 +153,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         if (request.isChecked) {
             if (node != undefined) {
                 //console.log(Date.now() - startTime);
-                blurNode(node);
+                highlightNode(node);
             }
         }      
     }
