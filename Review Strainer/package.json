@@ -1,0 +1,16 @@
+{
+  "name": "review-discriminator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/language": "^4.2.3",
+    "@google-cloud/storage": "^5.8.5",
+    "express": "^4.17.1"
+  }
+}
